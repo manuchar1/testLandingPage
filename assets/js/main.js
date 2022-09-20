@@ -26,3 +26,17 @@ function checkScroll(scrollOffset){
         header.removeClass('fixed');
     }
 }
+$('.header__nav-link, .header__logo, .header__menu-nav-link').click(function(event){
+    event.preventDefault();
+
+    $('.header__menu').removeClass('active');
+    $('.header__burger').removeClass('active');
+    $('body').removeClass('no-scroll');
+
+    let $this = $(this),
+        blockId = $this.data('scroll');
+        blockOffset = $(blockId).offset().top - headerH;
+    $('html, body').animate({
+        scrollTop: blockOffset
+    },1000)
+})

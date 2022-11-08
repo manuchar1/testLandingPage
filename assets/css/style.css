@@ -731,7 +731,8 @@ a:active {
 	transition: all .2s;
 }
 .footer__info-nav-link:hover {
-	font-weight: 600;
+	/*font-weight: 600;*/
+	transform:  scale(1.1);
 }
 
 .footer__socials {
